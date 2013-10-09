@@ -1,2 +1,83 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide="1"></li>
+        <li data-target="#myCarousel" data-slide="2"></li>
+        <li data-target="#myCarousel" data-slide="3"></li>
+        <li data-target="#myCarousel" data-slide="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Hey! What's up!</h1>
+                    <p>I am a cool app that teaches you how to stalk Tagbond members. It's really easy!</p>
+                    <p>There are 4 ways in which you can do this:</p>
+                    <ol>
+                        <li>Authorization Code</li>
+                        <li>Implicit</li>
+                        <li>Resource Owner Password</li>
+                        <li>Client Credentials</li>
+                    </ol>
+                    <p>Tagbond uses OAuth2 for authentication which is the latest standard for authentication. After learning these you can be the creepiest stalker in town.</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Authorization Code</h1>
+                    <hr>
+                    <p>This type of authentication is mainly intended for <b>server side applications that can keep their client id and client password secret</b>. For example, a PHP application whose code is not available to the public.</p>
+                    <p><b>Step 1 : </b>Using your client id you redirect to tagbond login page where the user enters his log in details.He will be shown the permissions required by the app.After that the user will be redirected back to the app along with a authorisation code.</p>
+                    <p><b>Step 2 : </b>The server side code of the app then uses this authorisation code along with the client id and secret to obtain the access token, which can be used in all subsequent requests.</p>
+                    <br>
+                    <br>
+                    <%= link_to "Live Demo", authorization_path, "class"=>"btn btn-danger btn-lg" %>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Implicit</h1>
+                    <hr>
+                    <p>This type of authentication is intended for <b>client side application like the ones using JavaScript, which CANNOT keep their client id and client secret as a secret</b>. There is only one step envolved in such applications. They directly get the token after the user approves them. In this case the access tokens would be short lived.</p>
+                    <br>
+                    <br>
+                    <%= link_to "Live Demo", implicit_path, "class"=>"btn btn-danger btn-lg" %>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Resource Owner Password</h1>
+                    <hr>
+                    <p>This authentication is exclusive to the <b>Official Tagbond native application only</b> as the <b>user will be directly entering their email and password into the app and trusting the app</b> to generate a token from the server. The tagbond app will be the only app which can transfer credits or register new users.</p>
+                    <br>
+                    <br>
+                    <%= link_to "Live Demo", rop_path, "class"=>"btn btn-danger btn-lg" %>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Client Credentials</h1>
+                    <hr>
+                    <p>This kind of authentication is <b>used when a app/community needs to log in on behalf of itself</b>. It wont be able to switch to the user perspective though. This is especially usefull in the Poker app which needs to transfer credits to the user from it's own account.</p>
+                    <br>
+                    <br>
+                    <%= link_to "Live Demo", client_path, "class"=>"btn btn-danger btn-lg" %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>

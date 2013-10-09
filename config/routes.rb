@@ -1,4 +1,8 @@
 StalkyRails::Application.routes.draw do
+  get "client" => "client#index"
+  get "rop" => "rop#index"
+  get "implicit" => "implicit#index"
+  get "authorization" => "authorization#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

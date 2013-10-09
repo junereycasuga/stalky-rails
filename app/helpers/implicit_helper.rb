@@ -1,0 +1,2 @@
+module ImplicitHelper
+end

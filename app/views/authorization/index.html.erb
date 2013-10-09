@@ -1,0 +1,22 @@
+<div class="well">
+    <h1>Authorization Code</h1>
+    <hr>
+    <h3>Step 1</h3>
+    <p>Redirect the user to the Tagbond login screen, where he can enter the login details and approve the app. And retrieve the authorization code</p>
+    <p><b>URL : </b>http://api.beta.tagbond.com/oauth</p>
+    <h3>Parameters</h3>
+    <div class="well">
+        <b>client_id</b>
+        <br>
+        <b>redirect_uri</b>
+        <br>
+        <b>response_type</b>
+        <br>
+        <b>scope</b>
+        <br>
+        <b>state</b>
+    </div>
+    <p>Note that we are note sending the client secret in this step</p>
+    <br> <br>
+    <%= link_to "Login with Tagbond", "#", "class"=>"btn btn-danger btn-lg", "disabled"=>true, "data-toggle"=>"tooltip", "data-placement"=>"right", "title"=>"Under Development" %>
+</div>

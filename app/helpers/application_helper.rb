@@ -1,2 +1,4 @@
 module ApplicationHelper
+    CLIENT_ID = "61B8222CBCB84EAA"
+    CLIENT_SECRET = "7929A7C4F79CE489"
 end
