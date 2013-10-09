@@ -7,8 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Stalky</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Authorization Code</a></li>
+                    <li><a href="#">Implicit</a></li>
+                    <li><a href="#">Resource Owner</a></li>
+                    <li><a href="#">Client Credentials</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<%= yield %>
+    <div class="container main-content">
+        <%= yield %>
+    </div>
 
 </body>
 </html>
