@@ -19,8 +19,5 @@ module StalkyRails
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    
-    CLIENT_ID = "61B8222CBCB84EAA"
-    CLIENT_SECRET "7929A7C4F79CE489"
   end
 end
