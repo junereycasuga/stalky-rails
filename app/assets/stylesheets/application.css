@@ -11,6 +11,11 @@
  *= require_self
  *= require bootstrap
  */
+::selection {
+    background: #d9534f;
+    color: #fff;
+    text-shadow: none;
+}
 
 .main-content {
     margin-top: 40px;
