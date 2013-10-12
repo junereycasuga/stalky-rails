@@ -9,4 +9,18 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-StalkyRails::Application.config.secret_key_base = 'e0b8e92732dc84b5eaade790a7e7a1e746cb5139fb5c9589f5d29963d8a26fa6371d73256a66706bc8db8443332343606ae0ceb4b69b5396d339013f1707a4fa'
+
+require 'securerandom'
+
+def secure_token
+    token_file = Rails.root.join('.secret')
+    if File.exist?(token_file)
+        File.read(token_file).chomp
+    else
+        token = SecureRandom.hex(64)
+        File.write(token_file, token)
+        token
+    end
+end
+
+StalkyRails::Application.config.secret_key_base = secure_token

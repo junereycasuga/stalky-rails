@@ -1,37 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stalky</title>
+    <title><%= app_title(yield(:page_title)) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <nav class="navbar navbar-tagbond navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <%= link_to "Stalky", "/", "class"=>"navbar-brand" %>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><%= link_to "Authorization Code", authorization_path %></li>
-                    <li><%= link_to "Implicit", implicit_path %></li>
-                    <li><%= link_to "Resource Owner", rop_path %></a></li>
-                    <li><%= link_to "Client Credentials", client_path %></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <%= render 'layouts/header' %>
 
     <div class="container main-content">
         <%= yield %>
         <hr class="featurette-divider">
         <footer>
-        <p>© <%= DateTime.now.year %> Junerey Casuga</p>
+        <p>© <%= DateTime.now.year %> | <%= link_to "Junerey Casuga", "http://junereycasuga.github.io" %></p>
         </footer>
     </div>
     

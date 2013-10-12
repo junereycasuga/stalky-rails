@@ -19,5 +19,19 @@ module StalkyRails
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    CLIENT_ID = "61B8222CBCB84EAA"
+    CLIENT_SECRET = "7929A7C4F79CE489"
+
+    BETA_API_ENDPOINT = "http://api.beta.tagbond.com/oauth"
+    API_ENDPOINT = "http://api.tagbond.com/oauth"
+
+    REDIRECT_URI = "http://stalky.herokuapp.com/authorization"
+    REDIRECT_URI_IMPLICIT = "http://stalky.herokuapp.com/implicit"
+
+    BETA_API_USER_DETAILS_URL = "http://api.beta.tagbond.com/user/profile"
+    API_USER_DETAILS_URL = "http://api.tagbond.com/user/profile"
+
+    BETA_API_COMMUNITY_DETAILS_URL = "http://api.beta.tagbond.com/community/details"
+    API_COMMUNITY_DETAILS_URL = "http://api.tagbond.com/community/details"
   end
 end
