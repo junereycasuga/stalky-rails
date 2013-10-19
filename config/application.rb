@@ -22,16 +22,17 @@ module StalkyRails
     CLIENT_ID = "61B8222CBCB84EAA"
     CLIENT_SECRET = "7929A7C4F79CE489"
 
-    BETA_API_ENDPOINT = "http://api.beta.tagbond.com/oauth"
+    RESPONSE_TYPE = "code"
+    STATE = Time.new.to_i
+
     API_ENDPOINT = "http://api.tagbond.com/oauth"
+
+    API_ACCESSTOKEN_ENDPOINT = "http://api.tagbond.com/oauth/accesstoken"
 
     REDIRECT_URI = "http://stalky.herokuapp.com/authorization"
     REDIRECT_URI_IMPLICIT = "http://stalky.herokuapp.com/implicit"
 
-    BETA_API_USER_DETAILS_URL = "http://api.beta.tagbond.com/user/profile"
     API_USER_DETAILS_URL = "http://api.tagbond.com/user/profile"
-
-    BETA_API_COMMUNITY_DETAILS_URL = "http://api.beta.tagbond.com/community/details"
     API_COMMUNITY_DETAILS_URL = "http://api.tagbond.com/community/details"
   end
 end

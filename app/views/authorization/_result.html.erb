@@ -1,0 +1,23 @@
+<h3>Result</h3>
+<div class="well">
+    <b>code : </b> <%= params[:code] %>
+    <br />
+    <b>state : </b> <%= params[:state] %>
+    <br />
+</div>
+
+<br /><br />
+
+<h3>Step 2</h3>
+<p>Convert the authentication code we go from the last step to access token.</p>
+<p>
+<b>URL : </b><%= StalkyRails::Application::API_ACCESSTOKEN_ENDPOINT %>
+</p>
+
+<h3>Parameters</h3>
+<div class="well">
+    <b>client_id : </b> [hidden]<br />
+    <b>client_secret : </b> [hidden]<br />
+    <b>redirect_uri : </b> <%= StalkyRails::Application::REDIRECT_URI %><br />
+    <b>grant_type : </b> authorization_code
+</div>

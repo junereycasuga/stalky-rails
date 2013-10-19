@@ -4,20 +4,29 @@
     <hr>
     <h3>Step 1</h3>
     <p>Redirect the user to the Tagbond login screen, where he can enter the login details and approve the app. And retrieve the authorization code</p>
-    <p><b>URL : </b>http://api.beta.tagbond.com/oauth</p>
+    <p><b>URL : </b><%= StalkyRails::Application::API_ENDPOINT %>
     <h3>Parameters</h3>
     <div class="well">
-        <b>client_id : </b>
+        <b>client_id : </b>[hidden]
         <br>
-        <b>redirect_uri : </b>
+        <b>redirect_uri : </b><%= StalkyRails::Application::REDIRECT_URI %>
         <br>
-        <b>response_type : </b>
+        <b>response_type : </b><%= StalkyRails::Application::RESPONSE_TYPE %>
         <br>
-        <b>scope : </b>
+        <b>scope : </b>Comma separated premissions [OPTIONAL][Currently in Alpha]
         <br>
         <b>state : </b>
+        <%=
+            if params[:state].present?
+                render 'result'
+            else
+                "#{StalkyRails::Application::STATE} [OPTIONAL] Random value to prevent CSRF attacks"
+            end
+        %>
     </div>
     <p>Note that we are note sending the client secret in this step</p>
     <br> <br>
+
+    
     <%= link_to "Login with Tagbond", "#", "class"=>"btn btn-danger btn-lg", "disabled"=>true, "data-toggle"=>"tooltip", "data-placement"=>"right", "title"=>"Under Development" %>
 </div>
